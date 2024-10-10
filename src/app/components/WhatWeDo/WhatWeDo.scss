@@ -1,0 +1,98 @@
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;           /* Заборона виділення тексту */
+    -webkit-user-drag: none;     /* Заборона перетягування елементів */
+    ::selection {
+        background: transparent; /* Замість синього фону робимо прозорий */
+        color: inherit; /* Колір тексту залишаємо таким, як є */
+      }
+      
+  }
+  
+  .slider {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    opacity: 0;
+    transform: translateX(-100%) scale(0.8) rotateY(-45deg);
+    transition: transform 1s ease, opacity 1s ease;
+  }
+  
+  .active {
+    opacity: 1;
+    transform: translateX(0) scale(1) rotateY(0);
+  }
+  
+  .prev {
+    transform: translateX(-100%) scale(0.8) rotateY(45deg);
+    opacity: 0.6;
+  }
+  
+  .next {
+    transform: translateX(100%) scale(0.8) rotateY(-45deg);
+    opacity: 0.6;
+  }
+  
+  .slide-content {
+    width: 100%;
+    height: 100%;
+    // background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+  }
+  
+  .controls {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .prev-button,
+  .next-button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #000;
+    padding: 3px 24px;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    color: #ff7e5f;
+  }
+  

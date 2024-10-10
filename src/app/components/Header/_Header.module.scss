@@ -1,0 +1,85 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  // background-color: #1c1c2d;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  color: #fff;
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+
+    // Пример для img и span
+    // img {
+    //   max-height: 40px;
+    //   margin-right: 1rem;
+    // }
+
+    // span {
+    //   font-size: 1.2rem;
+    //   font-weight: bold;
+    // }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    margin-left: 2rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  // Адаптив для планшетов
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__list {
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+    &__item {
+      margin-left: 0;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  // Адаптив для мобильных устройств
+  @media (max-width: 480px) {
+    padding: 0.5rem 1rem;
+
+    &__logo-container span {
+      font-size: 1rem;
+    }
+
+    a {
+      font-size: 0.9rem;
+    }
+  }
+
+  // Адаптив для 4K-дисплеев
+  @media (min-width: 2560px) {
+    &__logo-container span {
+      font-size: 1.5rem;
+    }
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}

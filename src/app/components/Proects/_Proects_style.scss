@@ -1,0 +1,68 @@
+.block__time-bg {
+    background-color: rgb(90, 25, 139);
+    width: 100%;
+    height: auto;
+}
+
+.projects__ {
+    &holder {
+        margin: 0;
+    }
+    &container {
+        margin: 0;
+    }
+    &info {
+        text-align: center;
+        margin: 20px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__title-holder {
+        margin: 0;
+    }
+    &__title {
+        margin: 0;
+    }
+    &__subtitle-holder {
+        margin: 0;
+    }
+    &__subtitle {
+        margin: 0;
+    }
+    &catalog-holder {
+        margin: 0;
+    }
+    &catalog {
+        margin: 0px 6%;
+        display: flex;
+        justify-content: space-between;
+        .card {
+            width: 32%;
+            &:hover {
+                .card__img {
+                    border: 1px solid #000;
+                    border-radius: 5px;
+                }
+            }
+            &__img-holder {
+                width: 100%;
+                position: relative;
+            }
+            &__img {
+                width: 100%;
+                border: 1px solid #fff;
+                height: auto;
+            }
+            &__title-holder {
+                margin: 0;
+            }
+            &__title {
+                padding: 1em;
+                text-align: center;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,38 @@
+.about {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  &__item {
+    margin: 0 20%;
+  }
+  &__item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 70px;
+    // background-image: url('/img/black-bricks.jpeg');
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+  }
+  &__item-img-title {
+    margin: 0;
+    color: #000;
+    font-size: 2em;
+    // background-color: #1c1c2dab ;
+    padding: 10px;
+    border-radius: 0.4em;
+  }
+  &__item-info-holder {
+    margin: 0;
+  }
+  &__item-info {
+    font-size: 1.4em;
+    padding: 15px 0;
+    text-align: center;
+    color: #595959;
+  }
+}

@@ -1,0 +1,51 @@
+.countersInfo__ {
+    &section {
+        padding:  150px 30px;
+        color: #fff;
+        // background: #1c1c2d;
+        background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    &block {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+    }
+    &item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width: 32%;
+        text-align: center;
+    }
+    &line-inner {
+        margin: 0;
+    }
+    &line {
+        margin: 0 auto;
+        width: 10%;
+        height: 2px;
+        background: #ff0000;
+    }
+    &title-inner {
+        margin: 0;
+    }
+    &title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    &count-inner {
+        margin: 0;
+    }
+    &count {
+        font-size: 69px;
+        line-height: 77px;
+    }
+    &subTitle-inner {
+        margin: 0;
+    }
+    &subTitle {
+        font-size: 15px;
+    }
+}
