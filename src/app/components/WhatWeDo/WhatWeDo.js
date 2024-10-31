@@ -68,25 +68,25 @@ const WhatWeDo = () => {
       <div className="slider">
         <div className={`slide ${currentSlide === 0 ? 'active' : ''} ${currentSlide === 1 ? 'prev' : ''} ${currentSlide === 2 ? 'next' : ''}`}>
           <div className="slide-content" style={{ backgroundColor: 'linear-gradient(to right, #ff7e5f, #feb47b)' }}>
-            <h2>Support Ukraine</h2>
-            <p>Assisting various fields including workers, humanitarian needs, and education programs for school children.</p>
-            <a href="#">Learn More</a>
+            <h2 className='slide__title' >Support Ukraine</h2>
+            <p className='slide__subtitle'>Assisting various fields including workers, humanitarian needs, and education programs for school children.</p>
+            <a className='slide__link' href="#">Learn More</a>
           </div>
         </div>
 
         <div className={`slide ${currentSlide === 1 ? 'active' : ''} ${currentSlide === 2 ? 'prev' : ''} ${currentSlide === 0 ? 'next' : ''}`}>
           <div className="slide-content" style={{ backgroundColor: 'linear-gradient(to right, #6a11cb, #2575fc)' }}>
-            <h2>Development of Custom Big Data Solutions</h2>
-            <p>Get a tailored Big Data solution that will transform the way you work with data and help you make informed decisions.</p>
-            <a href="#">Learn More</a>
+            <h2 className='slide__title'>Development of Custom Big Data Solutions</h2>
+            <p className='slide__subtitle'>Get a tailored Big Data solution that will transform the way you work with data and help you make informed decisions.</p>
+            <a className='slide__link' href="#">Learn More</a>
           </div>
         </div>
 
         <div className={`slide ${currentSlide === 2 ? 'active' : ''} ${currentSlide === 0 ? 'prev' : ''} ${currentSlide === 1 ? 'next' : ''}`}>
           <div className="slide-content" style={{ backgroundColor: 'linear-gradient(to right, #11998e, #38ef7d)' }}>
-            <h2>Custom Mobile Development</h2>
-            <p>Go mobile to better interact with your target audience and unlock new revenue streams with hybrid mobile apps.</p>
-            <a href="#">Learn More</a>
+            <h2 className='slide__title'>Custom Mobile Development</h2>
+            <p className='slide__subtitle'>Go mobile to better interact with your target audience and unlock new revenue streams with hybrid mobile apps.</p>
+            <a className='slide__link' href="#">Learn More</a>
           </div>
         </div>
       </div>

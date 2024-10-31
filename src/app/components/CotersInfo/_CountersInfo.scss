@@ -1,23 +1,44 @@
 .countersInfo__ {
     &section {
-        padding:  150px 30px;
+        padding:  40px 30px;
         color: #fff;
         // background: #1c1c2d;
         background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        @media (width > 800px) {
+            padding: 100px 30px;
+        }
     }
     &block {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: space-between;
-        width: 80%;
+        row-gap: 30px;
         margin: 0 auto;
+        @media (width > 799px) {
+            width: 100%;
+            align-items: baseline;
+            row-gap: 30px;
+            flex-direction:row;
+        }
+        @media (width > 899px) {
+            width: 90%;
+        }
+        @media (width > 1249px) {
+            width: 80%;
+        }
     }
     &item {
         display: flex;
+        align-items: center;
         flex-direction: column;
         row-gap: 5px;
-        width: 32%;
         text-align: center;
+        @media (width >  799px) {
+            width: 32px;
+            width: 80%;
+        }
     }
     &line-inner {
         margin: 0;
@@ -39,8 +60,17 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
         margin: 0;
     }
     &count {
-        font-size: 69px;
-        line-height: 77px;
+        font-size: 38px;
+        @media (width > 380px) {
+            font-size: 44px;
+        }
+        // @media (width > 799px) {
+        //     font-size: 38px;
+        // }
+        @media (width > 1800px) {
+            font-size: 69px;
+            line-height: 77px;
+        }
     }
     &subTitle-inner {
         margin: 0;

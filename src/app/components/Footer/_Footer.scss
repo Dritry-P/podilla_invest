@@ -1,0 +1,102 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+  
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+  
+      .company-info {
+        max-width: 300px;
+        text-align: left;
+  
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: #595959;
+        }
+  
+        p {
+          font-size: 1rem;
+          margin: 0.3rem 0;
+          color: #ccc;
+        }
+      }
+  
+      .map {
+        width: 100%;
+        max-width: 300px;
+  
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #595959;
+        }
+  
+        iframe {
+          width: 100%;
+          border-radius: 8px;
+        }
+      }
+  
+      .social-media {
+        max-width: 300px;
+        text-align: left;
+  
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #595959;
+        }
+  
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+  
+          a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #555;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+  
+            &:hover {
+              background-color: #fff;
+            }
+  
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  
+    .footer-bottom {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+  
+      p {
+        margin: 0;
+      }
+    }
+  }
+  

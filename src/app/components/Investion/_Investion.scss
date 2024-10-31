@@ -1,105 +1,49 @@
-.investment-section {
-    padding: 40px;
+.investmentBlock {
+  padding: 2rem;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 55%, rgb(0, 212, 255) 100%);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .plans {
     display: flex;
-    justify-content: center;
-    background-color: #f9f9f9;
-  
-    .investment-container {
-      display: flex;
-      max-width: 1200px;
-      width: 100%;
-      gap: 30px;
-  
-      .investment-plans {
-        width: 25%;
-        background-color: #fff;
-        border-right: 1px solid #ddd;
-        padding: 20px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        
-        h3 {
-          font-size: 1.5em;
-          margin-bottom: 20px;
-        }
-  
-        ul {
-          list-style-type: none;
-          padding: 0;
-  
-          li {
-            margin-bottom: 15px;
-            
-            a {
-              text-decoration: none;
-              color: #007bff;
-              font-size: 1.2em;
-            }
-          }
-        }
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .plan {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+
+      &.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
       }
-  
-      .investment-info {
-        width: 75%;
-        padding: 20px;
-  
-        h2 {
-          font-size: 2.4em;
-          margin-bottom: 20px;
-        }
-  
-        p {
-          font-size: 1.2em;
-          margin-bottom: 20px;
-        }
-  
-        .investment-section__info {
-          margin-bottom: 30px;
-  
-          h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-          }
-  
-          ul {
-            list-style-type: none;
-            padding: 0;
-  
-            li {
-              font-size: 1.2em;
-              margin-bottom: 10px;
-  
-              strong {
-                color: #007bff;
-              }
-            }
-          }
-        }
-  
-        .investment-section__nuances {
-          background-color: #e3f2fd;
-          padding: 20px;
-          border-radius: 10px;
-  
-          h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-          }
-  
-          ul {
-            list-style-type: none;
-            padding: 0;
-  
-            li {
-              font-size: 1.2em;
-              margin-bottom: 10px;
-  
-              strong {
-                color: #d9534f;
-              }
-            }
-          }
-        }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0.2rem 0;
       }
     }
   }
-  
+}

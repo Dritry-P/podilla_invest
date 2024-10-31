@@ -1,48 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './_Investion.scss';
 
-const InvestmentInfo = () => {
+const InvestmentBlock = () => {
+  const [selectedPlan, setSelectedPlan] = useState('medium'); // Вибраний інвестиційний план
+
+  const investmentPlans = [
+    {
+      id: 'short',
+      title: 'Короткостроковий',
+      duration: '1 рік',
+      minimum: '$5,000',
+      roi: '10%',
+      description: 'Підходить для тих, хто хоче отримати швидкий дохід.',
+    },
+    {
+      id: 'medium',
+      title: 'Середньостроковий',
+      duration: '3 роки',
+      minimum: '$10,000',
+      roi: '15%',
+      description: 'Оптимальний варіант для середньострокових інвестицій.',
+    },
+    {
+      id: 'long',
+      title: 'Довгостроковий',
+      duration: '5 років',
+      minimum: '$15,000',
+      roi: '20%',
+      description: 'Ідеально для тих, хто шукає стабільний довгостроковий дохід.',
+    },
+  ];
+
   return (
-    <section className="investment-section">
-      <div className="investment-container">
-        {/* Ліва частина з планами */}
-        <aside className="investment-plans">
-          <h3>Виберіть план інвестицій</h3>
-          <ul>
-            <li><a href="#plan1">План 1</a></li>
-            <li><a href="#plan2">План 2</a></li>
-            <li><a href="#plan3">План 3</a></li>
-            <li><a href="#plan4">План 4</a></li>
-          </ul>
-        </aside>
+    <div className="investmentBlock">
+      <h2>Інвестуйте з «Поділля-Інвест Сіті»</h2>
+      <p>Ми пропонуємо вигідні інвестиційні плани для різних категорій інвесторів, з гарантією стабільного доходу та прозорими умовами.</p>
 
-        {/* Права частина з інформацією */}
-        <div className="investment-info">
-          <h2>Інвестування в "Поділля-Інвест Сіті"</h2>
-          <p>Компанія пропонує вигідні умови для інвестування в будівельні проекти...</p>
-
-          <div className="investment-section__info">
-            <h3>Чому варто інвестувати?</h3>
-            <ul>
-              <li><strong>Сталий ріст ринку:</strong> Ринок нерухомості продовжує зростати...</li>
-              <li><strong>Постійний попит:</strong> Високий попит на сучасне житло...</li>
-              <li><strong>Високий захист інвестицій:</strong> Усі угоди надійно захищені...</li>
-              <li><strong>Швидка окупність:</strong> Інвестиції повертаються за 2-3 роки...</li>
-            </ul>
+      <div className="plans">
+        {investmentPlans.map((plan) => (
+          <div
+            key={plan.id}
+            className={`plan ${plan.id === selectedPlan ? 'active' : ''}`}
+            onClick={() => setSelectedPlan(plan.id)}
+          >
+            <h3>{plan.title}</h3>
+            <p><strong>Тривалість:</strong> {plan.duration}</p>
+            <p><strong>Мінімальна сума:</strong> {plan.minimum}</p>
+            <p><strong>ROI:</strong> {plan.roi}</p>
+            <p>{plan.description}</p>
           </div>
-
-          <div className="investment-section__nuances">
-            <h3>Нюанси інвестування</h3>
-            <ul>
-              <li><strong>Економічні ризики:</strong> Ціни на ринку можуть коливатись...</li>
-              <li><strong>Інфляція:</strong> Зміна інфляції може впливати на прибутковість...</li>
-              <li><strong>Тривалість проектів:</strong> Деякі проекти можуть зайняти більше часу...</li>
-            </ul>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default InvestmentInfo;
+export default InvestmentBlock;

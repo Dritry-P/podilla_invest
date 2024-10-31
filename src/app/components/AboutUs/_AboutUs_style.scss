@@ -4,19 +4,25 @@
   flex-direction: column;
   row-gap: 40px;
   &__item {
-    margin: 0 20%;
+    margin: 0 5%;
+    @media (width > 800px) {
+      margin: 0 20%;
+    }
   }
   &__item-img {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 50%;
+    width: 85%;
     height: 70px;
     // background-image: url('/img/black-bricks.jpeg');
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
+    @media (width > 800px) {
+      width: 60%;
+    }
   }
   &__item-img-title {
     margin: 0;

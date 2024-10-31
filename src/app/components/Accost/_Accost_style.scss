@@ -1,35 +1,44 @@
 .accost {
     &__bg {
         width: 100%;
-        background-image: url('/img/pexels-njeromin-14530324.jpg');
+        background-image: url('/img/ndb-min.jpg');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
     &__block {
         margin: 0 auto;
-        width: 55%;
+        width: 90%;
         min-height: 90dvh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         row-gap: 25px;
+        @media (width > 800px) {
+            width: 55%;
+        }
     }
     &__title-holder {
         margin: 0;
     }
     &__title {
         color: rgb(232, 232, 232);
-        font-size: 32px;
+        font-size: 16px;
+        @media (width > 800px) {
+            font-size: 32px;
+        }
     }
     &__text-holder {
         margin: 0;
     }
     &__text {
         color: #fff;
-        font-size: 28px;
+        font-size: 18px;
         text-align: center;
+        @media (width > 800px) {
+            font-size: 28px;
+        }
     }
     &__button-holder {
         margin: 0;
